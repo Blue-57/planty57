@@ -1,4 +1,14 @@
+/*home page*/
 .ast-single-post .entry-content a,
 .ast-comment-content a:not(.ast-comment-edit-reply-wrap a) {
     text-decoration: none;
+}
+
+
+#menu-admin,
+a {
+    color: black;
+    line-height: 30px;
+    display: flex;
+
 }
