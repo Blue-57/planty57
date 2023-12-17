@@ -1,4 +1,6 @@
 /*home page*/
+
+/*enleve barre du dessous bouton commander*/
 .ast-single-post .entry-content a,
 .ast-comment-content a:not(.ast-comment-edit-reply-wrap a) {
     text-decoration: none;
@@ -6,6 +8,7 @@
 
 
 #menu-admin,
+/* css pour admin */
 a {
     color: black;
     line-height: 30px;
@@ -15,20 +18,20 @@ a {
 
 .menu-link
 
-/*cacher lien ajout auto du theme*/
+/*cacher lien ajout auto du theme commander sous le bouton commander*/
     {
     display: none;
 }
 
-/*image feuille + canette */
+/*page commander conteneur compteur */
 
+/* largeur /meme div pour les 4 blocs html possible changement si jamais/ css theme astra fleche auto webkit enlever*/
+.quantiter {
+    width: 60px;
+    /*39px affichage commme maquette,60px sinn peut pas voir jusqu'a 100 modif html elementor */
+}
 
-
-/*canette*/
-
-
-
-/*image de droite*/
-
-
-/*image de gauche*/
+/* hauteur d'office bloc elementor  mais modifiable*/
+.quantiter {
+    height: 56px;
+}

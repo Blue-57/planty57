@@ -3,14 +3,14 @@
 add_action('wp_enqueue_scripts', 'wpchild_enqueue_styles');
 function wpchild_enqueue_styles()
 {
-    wp_enqueue_style('wpm-astra-style', get_stylesheet_directory_uri() . '/style.css');
+    wp_enqueue_style('wpm-astra-style', get_stylesheet_directory_uri() . '/style.css'); // fichier css de base creation theme enfant
     wp_enqueue_style('wpm-astra-theme', get_stylesheet_directory_uri() . '/theme.css'); //fichier css pour modification
 }
 
 
 
 
-
+//essai ajout admin( tableau)
 /*add_filter('wp_nav_menu_items', 'add_admin_link_menu', 10, 2); // hook wp nav
 
 function add_admin_link_menu($items, $args)
@@ -28,6 +28,8 @@ function add_admin_link_menu($items, $args)
     return $items;
 
 }*/
+
+// function pour admin validé 
 add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2); //hook nav 
 
 function add_admin_link($items, $args)
@@ -35,7 +37,7 @@ function add_admin_link($items, $args)
 
     //var_dump($args->theme_location);
     //pour rechercher quelle theme utilisé 
-    if (is_user_logged_in() && $args->theme_location == 'primary') {
+    if (is_user_logged_in() && $args->theme_location == 'primary') { // primary location 
 
         $items .= '<li id="menu-admin" ><a href="' . get_admin_url() . '">Admin</a></li>'; // ajout admin + lien 
 
@@ -44,4 +46,6 @@ function add_admin_link($items, $args)
     return $items;
 
 }
+
+
 ?>
